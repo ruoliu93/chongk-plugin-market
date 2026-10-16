@@ -61,5 +61,10 @@
     "插件市场"
   ],
   "author": "chongk.com",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruoliu93/chongk-plugin-market.git"
+  },
+  "homepage": "https://chongk.com/"
 }
