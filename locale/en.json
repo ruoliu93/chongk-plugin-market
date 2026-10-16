@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Plugin Market",
+    "description": "Browse DeepSeek Harness plugins collected from public npm metadata as cards: source repository, version, license, whether it installs, and a static capability scan. Copy the dsh plugin add command or jump to the source. Sidebar entry plus a full-width page with search and category filters."
+  }
+}

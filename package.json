@@ -1,0 +1,65 @@
+{
+  "name": "chongk-plugin-market",
+  "version": "0.1.1",
+  "description": "插件市场：侧栏入口 + 全屏插件浏览器。收录从 npm 公开元数据收集的 DSH 插件，标注来源、许可、能否安装与静态能力扫描结果，一键复制安装命令。",
+  "type": "module",
+  "icon": "icon.svg",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.0-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-renderer"
+      ]
+    },
+    "manifestVersion": 1
+  },
+  "files": [
+    "lib",
+    "locale",
+    "data",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.4"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4 || ~4.0.5-alpha.1",
+    "@deepseek-ai/dsh-client-locale": "0.2.0-rc.2 || 0.2.1-alpha.2",
+    "@deepseek-ai/dsh-client-ui-layout": "0.2.0-rc.2 || 0.2.1-alpha.2",
+    "@deepseek-ai/dsh-client-ui-renderer": "0.2.0-rc.2 || 0.2.1-alpha.2",
+    "react": ">=18.2.0 <19.0.0",
+    "react-dom": ">=18.2.0 <19.0.0"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "market",
+    "panel",
+    "catalogue",
+    "插件市场"
+  ],
+  "author": "chongk.com",
+  "license": "MIT"
+}
